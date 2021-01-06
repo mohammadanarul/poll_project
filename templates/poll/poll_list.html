@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head_title %}Home{% endblock head_title %}
+<!-- Start Main content Area -->
+{% block main_content %}
+<div class="container">
+    <div class="row">
+        <div class="col-xl-8 m-auto">
+            <ul class="list-group mt-5">
+                <li class="list-group-item list-group-item-action active text-center" aria-current="true">
+                  <h1>Electoral Poll</h1>
+                </li>
+                
+                {% for q in question %}
+                    <li class="list-group-item d-flex justify-content-between"><h5>{{ q.question }}</h5> 
+
+                    <div class="btn-group">
+                        <a href="{% url 'vote' pk=q.pk %}" class="btn btn-primary">Vote</a>
+                        <a href="{#% url 'vote_details' pk=q.pk %#}" class="btn btn-primary">Result</a>
+                    </div>
+                    </li>
+                {% endfor %}
+                    
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock main_content %}
+<!-- End Main content Area -->

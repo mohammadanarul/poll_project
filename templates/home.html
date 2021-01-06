@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head_title %}Home{% endblock head_title %}
+<!-- Start Main content Area -->
+{% block main_content %}
+<div class="container">
+    <div class="row text-center">
+        <div class="col-xl-10">
+            <div class="card mt-5">
+                <div class="card-body">
+                    <h1 class="mb-3">Electoral Vote</h1>
+                    <p class='text-left'>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid rem veritatis perferendis iure impedit
+                        saepe dolorem sapiente, doloribus obcaecati molestiae voluptates eveniet nisi doloremque, expedita
+                        repellendus recusandae. Obcaecati saepe fuga eius, vel autem mollitia ducimus, quisquam vero accusantium
+                        iusto, esse tempora! Voluptatem error a cupiditate unde corrupti, aut esse ratione optio eaque. Quos
+                        ipsum ullam magnam soluta. Obcaecati sit dignissimos dolore hic iusto neque veritatis quasi provident!
+                        Quos tenetur, laborum illum perferendis nostrum quis ipsam distinctio necessitatibus animi. Officia,
+                        quaerat maiores. Veritatis, placeat libero, impedit incidunt iusto excepturi vel cum magnam laboriosam
+                        doloribus sit! Expedita at, alias quia nesciunt eligendi aliquid eaque distinctio ipsum temporibus nisi
+                        quisquam, iusto obcaecati voluptates facilis perspiciatis inventore a eveniet reprehenderit aspernatur
+                        suscipit magnam. Quaerat, dolor veniam. Deserunt enim fugit magnam ducimus ea placeat quae ipsa maiores
+                        aliquam harum expedita, architecto labore porro, quaerat nam a quod. Maxime alias laudantium obcaecati
+                        quas neque, a iste.
+                    </p>
+                    <a href="{% url 'poll-list' %}" class="btn btn-primary">Avilable Poll</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main_content %}
+<!-- End Main content Area -->

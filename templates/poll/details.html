@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head_title %}Home{% endblock head_title %}
+<!-- Start Main content Area -->
+{% block main_content %}
+<section class="main-article mt-5">
+    <div class="conteiner">
+        <div class="row text-center">
+            <div class="col-xl-6 m-auto">
+                <div class="card">
+                    <div class="card-body">
+                        <h4>{{ question.question }}</h4>
+                        
+                        
+                        {% for choice in question.choice_set.all %}
+                        <div class="form-check d-flex justify-content-between">
+                            <label class="form-check-label" for="choice{{ forloop.counter }}">
+                                {{ choice }}
+                            </label>
+                            
+                            {% if choice.votes == 0 %}
+                                <span class="badge bg-danger">{{ choice.votes }}</span>
+                            {% else %}
+                                <span class="badge bg-primary">{{ choice.votes }}</span>
+                            {% endif %}
+                                
+                        </div>
+                        {% endfor %}
+                        <a href="{% url 'poll-list' %}" class="btn btn-primary">Back poll list</a>
+                            
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock main_content %}
+<!-- End Main content Area -->
