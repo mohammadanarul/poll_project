@@ -9,7 +9,7 @@
             <div class="col-xl-6 m-auto">
                 <div class="card">
                     <div class="card-body">
-                        <h4>{{ question.question }}</h4>
+                        <h4>{{ question.question }}<span class="badge bg-danger">{{ question.created_at|timesince }}</span></h4>
                         
                         
                         {% for choice in question.choice_set.all %}
